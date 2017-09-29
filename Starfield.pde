@@ -1,26 +1,44 @@
 //your code here
 void setup()
 {
-	//your code here
+  size( 400, 400 );//your code here
 }
 void draw()
 {
-	//your code here
+
 }
 class NormalParticle
 {
-	//your code here
+  double myX, myY, myAngle, mySpeed;
+  NormalParticle()
+  {
+    myX = ( Math.random() * 400 );
+    myY = ( Math.random() * 400 );
+    myAngle = 30;
+    mySpeed = ( Math.random() * 10 );
+    myColor = 255;
+  }
+  void move()
+  {
+    myX = myX + ( Math.cos() * mySpeed );
+    myY = myY + ( Math.sin() * mySpeed );
+  }
+  void show()
+  {
+    fill( ( Math.random() * 255 ),( Math.random() * 255 ),( Math.random() * 255 ) );
+    ellipse( myX, myY, 10, 10 );
+  }
 }
 interface Particle
 {
-	//your code here
+  //your code here
 }
 class OddballParticle //uses an interface
 {
-	//your code here
+  
 }
 class JumboParticle //uses inheritance
 {
-	//your code here
+  //your code here
 }
 
